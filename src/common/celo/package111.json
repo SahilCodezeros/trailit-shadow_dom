@@ -1,0 +1,14 @@
+{
+  "name": "celo-demo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@celo/contractkit": "^0.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
+  

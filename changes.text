@@ -1,0 +1,9 @@
+/*
+    Emoji icon in place of special character icon
+
+    -> changes in node modules folder of special character
+    -> path '@ckeditor/ckeditor5-special-characters/src/specialcharacter.js'
+    -> line: 85 --- icon: emoji
+
+*/
+

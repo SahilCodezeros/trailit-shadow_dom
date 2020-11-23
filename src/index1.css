@@ -1,0 +1,555 @@
+/* src/content.css */
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway:400,500,700&display=swap');
+:root {
+  --color-white:#ffffff;
+  --color: #FB542B;
+  --color-hover: #FF7958;
+  --color-gradiaant:linear-gradient(324deg, rgba(230,16,0,1) 0%, rgba(255,136,78,1) 100%);
+  --color-gray:#d4d4d4
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif!important;
+  letter-spacing: 0!important;
+
+}
+button {
+  margin-bottom: 0!important;
+}
+#my-extension-root {
+  font-family: 'Lato', sans-serif!important;
+  width: 40px;
+  height: 430px;
+  position: fixed;
+  top: 25%;
+  right: 40px;
+  z-index: 9999;
+}
+
+#my-extension-root button:focus {
+  outline: none;
+}
+
+#my-extension-root .wrap .blob {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  right: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#my-extension-root .wrap.open .blob {
+  display: block;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  padding: 0;
+}
+#my-extension-root .wrap .blob {
+  margin-top: 20px;
+  display: block;
+}
+.wrap .trail_plus{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.wrap .trail_edit{
+  width: 20px!important;
+  height: 20px!important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wrap.open .trail_plus{
+  opacity: 1;
+}
+.wrap.open .trail_edit{
+  opacity: 0;
+  
+}
+.wrap .menu img{
+  -webkit-transform: rotate(0); 
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 150ms cubic-bezier(.4,0,1,1);
+    transition: transform 150ms cubic-bezier(.4,0,1,1);
+}
+.wrap.open .menu img{
+  -webkit-transform:  rotate(315deg);
+    transform: rotate(315deg);
+    -webkit-transition: -webkit-transform 150ms cubic-bezier(.4,0,1,1);
+    transition: transform 150ms cubic-bezier(.4,0,1,1);
+}
+
+
+#my-extension-root .my-extension,
+#my-extension-root .wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: right;
+}
+
+#my-extension-root .wrap .blob svg {
+  box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -webkit-box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -moz-box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  background: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: right;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+body #my-extension-root .wrap .blob:after {
+  content: attr(data-title);
+  color: var(--color);
+  width: 130px;
+  margin-right: 6px;
+  box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -webkit-box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -moz-box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400!important;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 6px;
+  right: 50px;
+  text-transform: capitalize!important;
+  letter-spacing: 0;
+}
+
+#my-extension-root .wrap .blob:hover::after {
+  color: var(--color-white);
+  background:var(--color);
+}
+
+  .wrap button.blob{
+    -webkit-transform: scale(0);
+      transform:  scale(0);
+      transition: all .5s;
+  }
+  .wrap.open button.blob{
+    -webkit-transform: scale(1);
+      transform:  scale(1);
+  }
+  .wrap button:nth-child(2) {    
+    transition-delay: 300ms;
+  }
+  .wrap.open button:nth-child(2) {    
+    transition-delay: 50ms;
+  }
+  .wrap button:nth-child(3) {    
+    transition-delay: 250ms;
+  }
+  .wrap.open button:nth-child(3) {    
+    transition-delay: 100ms;
+  }
+  .wrap button:nth-child(4) {    
+    transition-delay: 200ms;
+  }
+  .wrap.open button:nth-child(4) {    
+    transition-delay: 150ms;
+  }
+  .wrap button:nth-child(5) {    
+    transition-delay: 150ms;
+  }
+  .wrap.open button:nth-child(5) {    
+    transition-delay: 200ms;
+  }
+  .wrap button:nth-child(6) {    
+    transition-delay: 100ms;
+  }
+  .wrap.open button:nth-child(6) {    
+    transition-delay: 250ms;
+  }
+  .wrap button:nth-child(7) {    
+    transition-delay: 50ms;
+  }
+  .wrap.open button:nth-child(7) {    
+    transition-delay: 0.3s;
+  }
+  
+  
+#my-extension-root button.menu , #my-extension-defaultroot button.menu{
+  position: relative;
+  height: 40px;
+  min-height: 40px;
+  width: 40px;
+  display: block;
+  background: var(--color-gradiaant);
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* #my-extension-root .menu:hover #my-extension-defaultroot button.menu:hover{
+  background: rgb(104, 172, 234);
+} */
+
+#my-extension-root .menu img, #my-extension-defaultroot button.menu img {
+  /* margin-top: 4px; */
+  width: 40px;
+  margin: 0;  
+  height: 40px;
+  vertical-align: middle;
+  background: transparent!important;
+}
+
+#my-extension-defaultroot .sidepopup {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  background: #fff;
+  width: 340px;
+  height: calc(100% - 80px);
+  padding: 0 25px;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#my-extension-defaultroot .space {
+  height: 15px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* #my-extension-defaultroot .sidepopup.open:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #ffffffbd;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  z-index: -1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+} */
+
+div#my-extension-defaultroot {
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  top: 70px;
+  right: 25px;
+  display: block;
+  z-index: 999999999;
+}
+
+#my-extension-defaultroot .sidepopup {
+  display: none;
+}
+
+#my-extension-defaultroot .sidepopup.open {
+  display: block;
+}
+
+#my-extension-defaultroot .sidepanal {
+  height: calc(100vh - 170px);
+  position: relative;
+}
+
+#my-extension-defaultroot .sidepopup.open+button.menu.pop {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+#my-extension-defaultroot button.menu.pop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  height: 65px;
+}
+
+#my-extension-defaultroot .title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  text-transform: unset;
+  -webkit-text-transform: unset;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+}
+
+#my-extension-defaultroot .my-4 {
+  margin: 30px 0 10px;
+}
+
+#my-extension-defaultroot .optionBtn {
+  float: right;
+}
+
+#my-extension-defaultroot .titleBack {
+  float: left;
+  color: var(--color);
+  font-size: 17px;
+  font-weight: bold;
+  display: table;
+}
+
+#my-extension-defaultroot .hdr {
+  display: inline-block;
+  width: 100%;
+}
+
+#my-extension-defaultroot .optionBtn button {
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  padding: 0;
+  margin-left: 10px !important;
+}
+
+#my-extension-defaultroot .optionBtn button img {
+  width: 5px;
+}
+
+#my-extension-defaultroot .optionBtn button:hover {
+  background: #d4d4d4;
+}
+
+#my-extension-defaultroot .titleBack button {
+  background: transparent;
+  border: none;
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+#my-extension-defaultroot .input {
+  font-size: 10px;
+  font-weight: 400;
+  border: 1px solid #D5D5D5;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  resize: none;
+}
+
+#my-extension-defaultroot input[type="submit"], #my-extension-defaultroot .btn {
+  color: var(--color);
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid var(--color);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background: #fff;
+  min-width: 82px;
+  line-height: 35px;
+  /* float: right; */
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+#my-extension-defaultroot .btn:hover {
+  background: var(--color);
+  color: #fff;
+}
+
+#my-extension-defaultroot .mb-2 {
+  margin-bottom: 5px;
+}
+.trail_video_frm{ padding-bottom: 5px;}
+#my-extension-defaultroot .pl-4 {
+  padding-left: 30px!important;
+}
+
+#my-extension-defaultroot .flow .li {
+  position: relative;
+}
+
+#my-extension-defaultroot .counter {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  text-align: center;
+  z-index: 1;
+  background: #d4d4d4;
+  width: 13px;
+  height: 13px;
+  box-sizing: border-box;
+  font-size: 0;
+  top: 32px;
+  left: -26px;
+}
+#my-extension-defaultroot .active .counter  {
+  border: 2px solid var(--color);
+  left: -36px;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  line-height: 24px!important;
+  background:var(--color-white);
+  color:var(--color-white);
+  top: 23px;
+}
+#my-extension-defaultroot .active .counter span {
+  background: var(--color);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: block;
+  font-size: 12px!important;
+}
+
+#my-extension-defaultroot .en_title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+#my-extension-defaultroot .en_desc, #my-extension-defaultroot .en_desc a{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+#my-extension-defaultroot .active .en_title, #my-extension-defaultroot .active .en_desc{
+  color: #212121;
+}
+#my-extension-defaultroot .li.done:after {
+  content: '';
+  width:0;
+  height: 100%;
+  position: absolute ;
+  top: 47px;
+  left: -20px;
+  border:0.5pt dashed var(--color-gray);
+}
+#my-extension-defaultroot .li.done:last-child:after {
+  content: none;
+}
+
+#my-extension-defaultroot .mr-2 {
+  margin-right: 20px;
+}
+
+#my-extension-defaultroot button:not(.s-btn) {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  padding: 0;
+}
+
+.trail_select_bx {
+  box-shadow: 0 0 10px 5px var(--color) !important;
+  -webkit-box-shadow:0 0 10px 5px var(--color) !important;
+}
+
+#my-extension-defaultroot .sidepopup .video {
+  height: calc(100% - 40px);
+}
+
+#my-extension-defaultroot .sidepopup .first_step {
+  height: 100%;
+}
+
+.sidepopcontent {
+  height: calc(100% - 20px); 
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.audio_wrap_tooltip {
+  position: fixed;
+  bottom:1%;
+  right:6%;
+  max-width: 500px;
+  /* box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5); */
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  z-index: 9999;
+  /* padding: 15px; */
+}
+.audio_wrap_tooltip img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.ex_mr_10{
+  margin-right: 10px;
+}
+.audio_wrap_tooltip .btn-wrap.videoShow{
+  position: static;
+  padding: 15px;
+  text-align: right;
+}
+#my-extension-defaultroot .drag_icon {
+  opacity: 0.4!important;
+  animation: none!important;
+  cursor: move;
+}
+
+#scroll::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+#scroll::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+#my-extension-defaultroot .audio_wrap_tooltip  button.ant-btn.ant-btn-primary{
+  background: var(--color) !important;
+  color: var(--color-white) !important;
+}
+#my-extension-defaultroot .audio_wrap_tooltip  button.ant-btn.ant-btn-primary:hover{
+  background: var(--color-white) !important;
+  color: var(--color) !important;
+}
+.en_desc p {
+  margin: 0;
+}
